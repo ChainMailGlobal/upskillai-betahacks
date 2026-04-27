@@ -28,6 +28,8 @@ disk so the pipeline can be reviewed end to end before real API calls.
 - `reference_packs.py`: inspect packs and lessons from the terminal
 - `build_kdemo.py`: generate a narrated demo animatic in minutes
 - `docs/kdemo_quickstart.md`: fastest path to a pitchable MP4
+- `docs/hackathon_screen_recording.md`: timed 3-minute judge walkthrough
+- `record_judge_demo.ps1`: one-command local demo sequence for recording
 - `docs/product_modes.md`: Learn Mode and Assist Mode architecture
 - `docs/source_governance.md`: text-first source policy
 - `orchestrator.py`: full DAG runner
