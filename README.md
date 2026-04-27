@@ -30,6 +30,9 @@ disk so the pipeline can be reviewed end to end before real API calls.
 - `docs/kdemo_quickstart.md`: fastest path to a pitchable MP4
 - `docs/hackathon_screen_recording.md`: timed 3-minute judge walkthrough
 - `record_judge_demo.ps1`: one-command local demo sequence for recording
+- `docs/byteplus_two_minute_submission.md`: 2-minute BytePlus Seed submission path
+- `prepare_byteplus_submission.py`: build a compliance summary and talk track from a run
+- `record_byteplus_submission.ps1`: run and package the BytePlus submission flow
 - `docs/product_modes.md`: Learn Mode and Assist Mode architecture
 - `docs/source_governance.md`: text-first source policy
 - `orchestrator.py`: full DAG runner
@@ -52,6 +55,12 @@ python orchestrator.py --run-name live_smoke --input-video .\inputs\master_recor
 ```
 
 The first command creates a resumable run under `runs/demo/`.
+
+## Competition Paths
+
+- Use `build_kdemo.py` and `record_judge_demo.ps1` for the general screen-recording walkthrough.
+- Use `record_byteplus_submission.ps1` and `prepare_byteplus_submission.py` for the BytePlus Seed-only track.
+- Do not use the text-card `build_kdemo.py` animatic as the core evidence for the BytePlus-only submission; that track should lead with live Seedream / Seedance / Seed Speech / OmniHuman outputs from `orchestrator.py`.
 
 ## Product Modes
 
