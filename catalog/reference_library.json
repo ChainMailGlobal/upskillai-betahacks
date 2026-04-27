@@ -1,0 +1,842 @@
+{
+  "version": "2026-04-26",
+  "source_policy": {
+    "authoritative_priority": "Use manufacturer manuals, owner manuals, official safety guidance, and text-based trade documentation as the script authority. Use YouTube only for blocking, shot rhythm, hand motion, and overlay placement.",
+    "youtube_policy": "Do not rehost or transform third-party footage into exported lesson videos without permission. Embed, link, or use as visual reference only.",
+    "export_policy": "Generated Seedance clips should be newly created scenes driven by text prompts, safety notes, and abstracted visual blocking rather than frame-copying source footage."
+  },
+  "packs": [
+    {
+      "id": "electrical_field_basics",
+      "title": "Electrical Field Basics",
+      "summary": "Entry-level residential electrical explainers, panel literacy, and expert-gated high-voltage overlays.",
+      "risk_profile": "high-risk expert gate for energized or panel-interior work",
+      "backend_enrichment": [
+        "jurisdiction permit trigger lookup",
+        "load calculation checklist",
+        "panel and breaker compatibility notes",
+        "AFCI/GFCI code requirement hints by room type"
+      ],
+      "micro_lessons": [
+        {
+          "id": "electrical_panel_orientation",
+          "title": "Breaker Panel Orientation",
+          "scenario": "Teach a homeowner or apprentice how to identify the main breaker, branch breakers, neutral bar, and grounding path before any service discussion.",
+          "delivery_target": "learn",
+          "expert_gate_required": true,
+          "overlay_beats": [
+            "label the main disconnect and keep-clear zone",
+            "trace branch circuit grouping with color overlays",
+            "mark neutral and ground bars without implying touch interaction",
+            "end on a call-professional safety banner"
+          ],
+          "backend_enrichment": [
+            "panel label template",
+            "breaker legend OCR",
+            "permit trigger questionnaire"
+          ],
+          "primary_text_sources": [
+            {
+              "publisher": "This Old House",
+              "title": "Inside Your Home's Electrical Service Panel",
+              "url": "https://www.thisoldhouse.com/electrical/inside-your-homes-electrical-service-panel"
+            },
+            {
+              "publisher": "Eaton",
+              "title": "Residential Circuit Breakers",
+              "url": "https://www.eaton.com/us/en-us/products/electrical-circuit-protection/residential-circuit-breakers.html"
+            }
+          ],
+          "youtube_reference_videos": [
+            {
+              "publisher": "This Old House",
+              "title": "How to Install an Electrical Breaker Panel",
+              "url": "https://www.youtube.com/watch?v=uBN7K3vpKmg"
+            }
+          ]
+        },
+        {
+          "id": "main_breaker_shutdown_sequence",
+          "title": "Main Breaker Shutdown Sequence",
+          "scenario": "Visualize a safe expert-only shutoff sequence for a training clip about panel upgrades and de-energization workflow.",
+          "delivery_target": "learn",
+          "expert_gate_required": true,
+          "overlay_beats": [
+            "show PPE and no-touch boundary before the panel opens",
+            "animate the main breaker handle path only after safety checks",
+            "display lockout-tagout and meter verification callouts",
+            "close with a red licensed-electrician warning card"
+          ],
+          "backend_enrichment": [
+            "service size checklist",
+            "permit and inspection flow",
+            "utility disconnect coordination notes"
+          ],
+          "primary_text_sources": [
+            {
+              "publisher": "This Old House",
+              "title": "How To Upgrade an Electrical Panel to 200-Amp Service",
+              "url": "https://www.thisoldhouse.com/electrical/how-to-upgrade-an-electrical-panel-to-200-amp-service"
+            },
+            {
+              "publisher": "Eaton",
+              "title": "Main Circuit Breakers",
+              "url": "https://www.eaton.com/us/en-us/catalog/electrical-circuit-protection/main-circuit-breakers.html"
+            },
+            {
+              "publisher": "ICC",
+              "title": "ICC Recognizes NFPA NEC as the Electrical Code Used With I-Codes",
+              "url": "https://www.iccsafe.org/building-safety-journal/press-releases/icc-announces-official-recognition-of-the-nfpas-national-electrical-code-as-the-electrical-code-for-use-with-the-icc-family-of-codes/"
+            }
+          ],
+          "youtube_reference_videos": [
+            {
+              "publisher": "This Old House",
+              "title": "How to Install an Electrical Breaker Panel",
+              "url": "https://www.youtube.com/watch?v=uBN7K3vpKmg"
+            },
+            {
+              "publisher": "This Old House",
+              "title": "Sub Panel",
+              "url": "https://www.youtube.com/watch?v=biFOHD2D04Y"
+            }
+          ]
+        },
+        {
+          "id": "gfci_outlet_overview",
+          "title": "GFCI Outlet Overview",
+          "scenario": "Generate a bathroom or kitchen outlet explainer showing what TEST and RESET do and where GFCI protection is expected.",
+          "delivery_target": "learn",
+          "expert_gate_required": false,
+          "overlay_beats": [
+            "highlight TEST and RESET buttons and outlet face labels",
+            "show wet-area context iconography instead of live wiring closeups",
+            "animate a protected downstream outlet concept",
+            "end with a quick monthly test reminder"
+          ],
+          "backend_enrichment": [
+            "room-type protection guidance",
+            "inspection checklist item",
+            "replacement part lookup"
+          ],
+          "primary_text_sources": [
+            {
+              "publisher": "Leviton",
+              "title": "How to Install GFCI, AFCI, GFCI/AFCI Outlets",
+              "url": "https://decorasmartsupport.leviton.com/hc/en-us/articles/16801483473819-How-to-Install-GFCI-AFCI-GFCI-AFCI-Outlets"
+            },
+            {
+              "publisher": "Eaton",
+              "title": "Residential Circuit Breakers",
+              "url": "https://www.eaton.com/us/en-us/products/electrical-circuit-protection/residential-circuit-breakers.html"
+            }
+          ],
+          "youtube_reference_videos": [
+            {
+              "publisher": "This Old House",
+              "title": "How to Install an Electrical Breaker Panel",
+              "url": "https://www.youtube.com/watch?v=uBN7K3vpKmg"
+            }
+          ]
+        },
+        {
+          "id": "permit_and_circuit_labeling",
+          "title": "Permit and Circuit Labeling Flow",
+          "scenario": "Create a byte-sized onboarding clip that explains why permits, inspections, and accurate panel labeling matter before electrical alterations.",
+          "delivery_target": "assist",
+          "expert_gate_required": true,
+          "overlay_beats": [
+            "show permit packet and jurisdiction search overlay",
+            "animate circuit naming conventions beside the panel schedule",
+            "flag rooms that often trigger AFCI or GFCI updates",
+            "close on inspection-ready photo checklist"
+          ],
+          "backend_enrichment": [
+            "MuniCode jurisdiction search",
+            "ICC code reference note",
+            "permit status log"
+          ],
+          "primary_text_sources": [
+            {
+              "publisher": "ICC Digital Codes",
+              "title": "Digital Codes Home",
+              "url": "https://codes.iccsafe.org/"
+            },
+            {
+              "publisher": "Municode Library",
+              "title": "Municipal Code Library",
+              "url": "https://library.municode.com/"
+            }
+          ],
+          "youtube_reference_videos": [
+            {
+              "publisher": "This Old House",
+              "title": "Sub Panel",
+              "url": "https://www.youtube.com/watch?v=biFOHD2D04Y"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "mini_split_field_service",
+      "title": "Mini-Split Field Service",
+      "summary": "Ductless mini-split install, maintenance, fault triage, and live remote support workflows.",
+      "risk_profile": "mixed; maintenance is homeowner-safe, refrigerant/electrical service requires expert gate",
+      "backend_enrichment": [
+        "OEM model and serial lookup",
+        "fault code and error glossary",
+        "permit trigger check for new install",
+        "maintenance interval reminders"
+      ],
+      "micro_lessons": [
+        {
+          "id": "mini_split_install_layout",
+          "title": "Mini-Split Install Layout",
+          "scenario": "Explain indoor head placement, condensate slope, line-set route, disconnect location, and outdoor condenser clearance for a new wall-mounted install.",
+          "delivery_target": "learn",
+          "expert_gate_required": true,
+          "overlay_beats": [
+            "anchor the indoor head height and setback dimensions",
+            "draw the line-set and drain route through the wall",
+            "show condenser clearance bubbles and pad footprint",
+            "mark the electrical disconnect and service access zones"
+          ],
+          "backend_enrichment": [
+            "BTU sizing worksheet",
+            "permit checklist",
+            "approved equipment list"
+          ],
+          "primary_text_sources": [
+            {
+              "publisher": "This Old House",
+              "title": "How to Install a Mini-Split AC Heat Pump",
+              "url": "https://www.thisoldhouse.com/heating-cooling/21016936/how-to-install-a-mini-split-ac-heat-pump"
+            },
+            {
+              "publisher": "Trane",
+              "title": "What Is a Mini-Split?",
+              "url": "https://www.trane.com/residential/en/resources/glossary/what-is-a-mini-split/"
+            },
+            {
+              "publisher": "Daikin",
+              "title": "19 Series Wall Mount Technical Documentation",
+              "url": "https://daikincomfort.com/products/heating-cooling/single-zone/heat-pumps/19-series-wall-mount"
+            }
+          ],
+          "youtube_reference_videos": [
+            {
+              "publisher": "This Old House",
+              "title": "How to Install a Wall-Mounted Mini-Split",
+              "url": "https://www.youtube.com/watch?v=2bMb-K_baOI"
+            },
+            {
+              "publisher": "This Old House",
+              "title": "How to Install a Ductless Mini-Split Air Conditioner",
+              "url": "https://www.youtube.com/watch?v=ozaw9QhxkQU"
+            }
+          ]
+        },
+        {
+          "id": "mini_split_filter_cleaning",
+          "title": "Mini-Split Filter Cleaning",
+          "scenario": "Generate a homeowner-safe maintenance clip for opening the indoor cover, removing filters, washing them, and restoring the unit.",
+          "delivery_target": "learn",
+          "expert_gate_required": false,
+          "overlay_beats": [
+            "show power-off reminder before the cover opens",
+            "animate filter removal direction and clip locations",
+            "label gentle wash and dry steps",
+            "show reinstallation and airflow confirmation"
+          ],
+          "backend_enrichment": [
+            "maintenance schedule reminders",
+            "part and filter lookup",
+            "service escalation trigger if mold or ice is present"
+          ],
+          "primary_text_sources": [
+            {
+              "publisher": "This Old House",
+              "title": "How to Clean and Maintain Your Mini Split",
+              "url": "https://www.thisoldhouse.com/heating-cooling/how-to-clean-and-maintain-your-mini-split"
+            },
+            {
+              "publisher": "Trane",
+              "title": "Do Mini-Splits Have Filters?",
+              "url": "https://www.trane.com/residential/en/resources/troubleshooting/ductless-systems/do-mini-splits-have-filters/"
+            },
+            {
+              "publisher": "Trane",
+              "title": "Mini Split Maintenance: What Do Ductless Systems Need?",
+              "url": "https://www.trane.com/residential/en/resources/maintenance-tips/ductless-systems/"
+            }
+          ],
+          "youtube_reference_videos": [
+            {
+              "publisher": "This Old House",
+              "title": "How to Clean and Maintain Your Mini Split",
+              "url": "https://www.youtube.com/watch?v=hZulTP0LpRA"
+            }
+          ]
+        },
+        {
+          "id": "mini_split_line_set_overview",
+          "title": "Line-Set and Drain Path Overview",
+          "scenario": "Build a byte-sized explainer around flare connections, drain slope, wall penetration, and weatherproofing without depicting live refrigerant handling as DIY.",
+          "delivery_target": "learn",
+          "expert_gate_required": true,
+          "overlay_beats": [
+            "trace refrigerant and control cable bundle separately from the drain",
+            "show required drain fall with a slope ruler overlay",
+            "highlight wall sleeve and seal points",
+            "end with a pro-install requirement banner"
+          ],
+          "backend_enrichment": [
+            "approved line-set length table",
+            "model-specific install manual lookup",
+            "service ticket photo checklist"
+          ],
+          "primary_text_sources": [
+            {
+              "publisher": "Daikin",
+              "title": "19 Series Wall Mount Service Manual Links",
+              "url": "https://daikincomfort.com/products/heating-cooling/single-zone/heat-pumps/19-series-wall-mount"
+            },
+            {
+              "publisher": "Trane",
+              "title": "What Is a Mini-Split?",
+              "url": "https://www.trane.com/residential/en/resources/glossary/what-is-a-mini-split/"
+            }
+          ],
+          "youtube_reference_videos": [
+            {
+              "publisher": "This Old House",
+              "title": "How to Install a Ductless Mini-Split Air Conditioner",
+              "url": "https://www.youtube.com/watch?v=ozaw9QhxkQU"
+            },
+            {
+              "publisher": "HVAC School",
+              "title": "Mini-Split Install & Service W/ AC Service Tech",
+              "url": "https://www.youtube.com/watch?v=ibC8usONB1o"
+            }
+          ]
+        },
+        {
+          "id": "mini_split_fault_code_triage",
+          "title": "Mini-Split Fault Code Triage",
+          "scenario": "Support a remote expert session where the onsite worker points at the nameplate, board lights, or controller while the AI surfaces likely error-code explanations and safe checks.",
+          "delivery_target": "assist",
+          "expert_gate_required": true,
+          "overlay_beats": [
+            "OCR the model and serial number from the unit nameplate",
+            "highlight where the installer or service manual stores fault references",
+            "show non-invasive checks like filters, coil cleanliness, and visible drain issues",
+            "escalate electrical or refrigerant diagnostics to the expert panel"
+          ],
+          "backend_enrichment": [
+            "OCR model/serial lookup",
+            "error code search",
+            "service manual retrieval",
+            "live expert annotation session"
+          ],
+          "primary_text_sources": [
+            {
+              "publisher": "Daikin",
+              "title": "19 Series Wall Mount Operation and Service Manual Links",
+              "url": "https://daikincomfort.com/products/heating-cooling/single-zone/heat-pumps/19-series-wall-mount"
+            },
+            {
+              "publisher": "Trane",
+              "title": "Mini Split Maintenance: What Do Ductless Systems Need?",
+              "url": "https://www.trane.com/residential/en/resources/maintenance-tips/ductless-systems/"
+            }
+          ],
+          "youtube_reference_videos": [
+            {
+              "publisher": "HVAC School",
+              "title": "Mini-Split Install & Service W/ AC Service Tech",
+              "url": "https://www.youtube.com/watch?v=ibC8usONB1o"
+            },
+            {
+              "publisher": "This Old House",
+              "title": "How to Clean and Maintain Your Mini Split",
+              "url": "https://www.youtube.com/watch?v=hZulTP0LpRA"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "painting_room_refresh",
+      "title": "Painting Room Refresh",
+      "summary": "Room prep, cut-in, rolling technique, and finish cleanup for indoor painting micro-lessons.",
+      "risk_profile": "low-risk homeowner friendly",
+      "backend_enrichment": [
+        "paint quantity calculator",
+        "material checklist",
+        "VOC and ventilation reminders",
+        "surface prep checklist"
+      ],
+      "micro_lessons": [
+        {
+          "id": "paint_room_prep",
+          "title": "Room Prep and Masking",
+          "scenario": "Create a short lesson that teaches furniture protection, floor covering, outlet masking, and prep order before painting begins.",
+          "delivery_target": "learn",
+          "expert_gate_required": false,
+          "overlay_beats": [
+            "mark furniture move zones and drop cloth coverage",
+            "highlight outlet cover removal and tape points",
+            "show trim, floor, and window masking sequence",
+            "finish with a ventilation and drying reminder"
+          ],
+          "backend_enrichment": [
+            "materials checklist",
+            "coverage calculator",
+            "surface prep checklist"
+          ],
+          "primary_text_sources": [
+            {
+              "publisher": "Sherwin-Williams",
+              "title": "How-To Paint a Room",
+              "url": "https://www.sherwin-williams.com/homeowners/interior-stains-howto/JustforStarters/sw-video-jfs-paint-room"
+            },
+            {
+              "publisher": "This Old House",
+              "title": "How To Paint a Room Like a Pro",
+              "url": "https://www.thisoldhouse.com/painting/how-to-paint-a-room-like-a-pro"
+            }
+          ],
+          "youtube_reference_videos": [
+            {
+              "publisher": "This Old House",
+              "title": "How to Paint a Room Like a Pro",
+              "url": "https://www.youtube.com/watch?v=l2_kmWm3P1I"
+            }
+          ]
+        },
+        {
+          "id": "paint_cut_in",
+          "title": "Cut-In Around Trim and Ceiling",
+          "scenario": "Generate a clip focused on brush angle, wet edge, and careful cut-in around window trim and ceiling lines.",
+          "delivery_target": "learn",
+          "expert_gate_required": false,
+          "overlay_beats": [
+            "show brush grip and angle near the ferrule",
+            "trace the cut-in band along the ceiling and trim edges",
+            "overlay a wet-edge reminder before rolling",
+            "mark where liquid mask or putty-knife shielding helps at windows"
+          ],
+          "backend_enrichment": [
+            "tool selection checklist",
+            "finish recommendation by room type"
+          ],
+          "primary_text_sources": [
+            {
+              "publisher": "Sherwin-Williams",
+              "title": "How to Paint a Room",
+              "url": "https://ltx-www.sherwin-williams.com/en-us/project-center/paint/how-to-paint-room"
+            },
+            {
+              "publisher": "This Old House",
+              "title": "Paint a Room Like a Pro",
+              "url": "https://www.thisoldhouse.com/painting/how-to-paint-a-room"
+            }
+          ],
+          "youtube_reference_videos": [
+            {
+              "publisher": "This Old House",
+              "title": "How to Paint a Room Like a Pro",
+              "url": "https://www.youtube.com/watch?v=l2_kmWm3P1I"
+            }
+          ]
+        },
+        {
+          "id": "paint_roll_walls",
+          "title": "Rolling Walls With a Wet Edge",
+          "scenario": "Produce a short sequence on roller loading, overlap, and wall coverage pattern after the edges are cut in.",
+          "delivery_target": "learn",
+          "expert_gate_required": false,
+          "overlay_beats": [
+            "show tray loading without oversaturating the roller",
+            "animate overlap percentages and wet-edge movement",
+            "mark the top-down work direction",
+            "close with second-coat timing guidance"
+          ],
+          "backend_enrichment": [
+            "coverage estimator",
+            "dry-time reminders"
+          ],
+          "primary_text_sources": [
+            {
+              "publisher": "Sherwin-Williams",
+              "title": "Best Order for Painting a Room",
+              "url": "https://ltx-www.sherwin-williams.com/en-us/project-center/paint/best-order-painting-room"
+            },
+            {
+              "publisher": "This Old House",
+              "title": "How To Paint a Room Like a Pro",
+              "url": "https://www.thisoldhouse.com/painting/how-to-paint-a-room-like-a-pro"
+            }
+          ],
+          "youtube_reference_videos": [
+            {
+              "publisher": "This Old House",
+              "title": "How to Paint a Room Like a Pro",
+              "url": "https://www.youtube.com/watch?v=l2_kmWm3P1I"
+            }
+          ]
+        },
+        {
+          "id": "paint_cleanup_touchup",
+          "title": "Cleanup and Touch-Up",
+          "scenario": "Show a finish sequence for tape removal, curing expectations, and small touch-ups after final coat inspection.",
+          "delivery_target": "learn",
+          "expert_gate_required": false,
+          "overlay_beats": [
+            "mark safe tape removal direction",
+            "show curing-time reminders before heavy contact",
+            "highlight common touch-up defect spots",
+            "end with a tidy tool-cleanup card"
+          ],
+          "backend_enrichment": [
+            "touch-up checklist",
+            "room re-entry timer"
+          ],
+          "primary_text_sources": [
+            {
+              "publisher": "This Old House",
+              "title": "How To Paint a Room Like a Pro",
+              "url": "https://www.thisoldhouse.com/painting/21017590/how-to-paint-a-room-like-a-pro"
+            },
+            {
+              "publisher": "Sherwin-Williams",
+              "title": "Interior Painting Order",
+              "url": "https://www.sherwin-williams.com/homeowners/how-to/painting/interior-painting-how-tos/interior-painting/sw-article-dir-intpaintorder"
+            }
+          ],
+          "youtube_reference_videos": [
+            {
+              "publisher": "This Old House",
+              "title": "How to Paint a Room Like a Pro",
+              "url": "https://www.youtube.com/watch?v=l2_kmWm3P1I"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "window_replacement_basics",
+      "title": "Window Replacement Basics",
+      "summary": "Measurement, removal, placement, shimming, and sealing concepts for replacement windows.",
+      "risk_profile": "moderate; homeowner-friendly on ground-floor replacements, higher risk on full-frame and elevated work",
+      "backend_enrichment": [
+        "egress and size checks",
+        "energy product lookup",
+        "permit trigger check",
+        "sealant and flashing checklist"
+      ],
+      "micro_lessons": [
+        {
+          "id": "window_measure_opening",
+          "title": "Measure the Existing Opening",
+          "scenario": "Build a measurement clip covering width, height, and squareness checks before ordering a replacement window.",
+          "delivery_target": "learn",
+          "expert_gate_required": false,
+          "overlay_beats": [
+            "show top, middle, and bottom width measurements",
+            "show left, center, and right height measurements",
+            "animate diagonal measurement for squareness",
+            "end with insert-vs-full-frame decision hints"
+          ],
+          "backend_enrichment": [
+            "dimension capture form",
+            "product fit validation",
+            "permit trigger check"
+          ],
+          "primary_text_sources": [
+            {
+              "publisher": "This Old House",
+              "title": "How To Replace a Window",
+              "url": "https://www.thisoldhouse.com/windows/21016627/how-to-install-replacement-windows"
+            },
+            {
+              "publisher": "Andersen Windows",
+              "title": "Insert Window Installation",
+              "url": "https://www.andersenwindows.com/support/window-door-installation/diy/insert-window-replacement"
+            }
+          ],
+          "youtube_reference_videos": [
+            {
+              "publisher": "This Old House",
+              "title": "How to Install a Replacement Window",
+              "url": "https://www.youtube.com/watch?v=s8Rlfs7gZOo"
+            }
+          ]
+        },
+        {
+          "id": "window_remove_old_unit",
+          "title": "Remove the Old Sash and Stops",
+          "scenario": "Create an explainer for removing stops, lifting sashes, and clearing the old unit without damaging surrounding trim.",
+          "delivery_target": "learn",
+          "expert_gate_required": false,
+          "overlay_beats": [
+            "label stops, sash cords, and trim pry points",
+            "animate controlled sash removal path",
+            "show insulation voids revealed after removal",
+            "end with debris and glass safety callouts"
+          ],
+          "backend_enrichment": [
+            "tool checklist",
+            "disposal note",
+            "frame condition checklist"
+          ],
+          "primary_text_sources": [
+            {
+              "publisher": "Andersen Windows",
+              "title": "Insert Window Installation",
+              "url": "https://www.andersenwindows.com/support/window-door-installation/diy/insert-window-replacement"
+            },
+            {
+              "publisher": "This Old House",
+              "title": "How To Install a Replacement Window",
+              "url": "https://www.thisoldhouse.com/windows/21017130/how-to-install-a-replacement-window"
+            }
+          ],
+          "youtube_reference_videos": [
+            {
+              "publisher": "This Old House",
+              "title": "How to Install a Replacement Window",
+              "url": "https://www.youtube.com/watch?v=s8Rlfs7gZOo"
+            },
+            {
+              "publisher": "2 Minute How To",
+              "title": "How To Use A New Construction Window For A Replacement Window",
+              "url": "https://www.youtube.com/watch?v=Qg7vX53n-xc"
+            }
+          ]
+        },
+        {
+          "id": "window_set_shim_fasten",
+          "title": "Set, Shim, and Fasten the Replacement Window",
+          "scenario": "Explain how the new unit is set on the sill, shimmed square, and fastened without bowing the frame.",
+          "delivery_target": "learn",
+          "expert_gate_required": false,
+          "overlay_beats": [
+            "show sill contact point and expander placement",
+            "animate shim positions at screw points",
+            "display diagonal check for square",
+            "mark screw locations and no-bow caution"
+          ],
+          "backend_enrichment": [
+            "shim checklist",
+            "window operation QA list"
+          ],
+          "primary_text_sources": [
+            {
+              "publisher": "This Old House",
+              "title": "How To Replace a Window",
+              "url": "https://www.thisoldhouse.com/windows/21016627/how-to-install-replacement-windows"
+            },
+            {
+              "publisher": "Andersen Windows",
+              "title": "Insert Window Installation",
+              "url": "https://www.andersenwindows.com/support/window-door-installation/diy/insert-window-replacement"
+            }
+          ],
+          "youtube_reference_videos": [
+            {
+              "publisher": "This Old House",
+              "title": "How to Install a Replacement Window",
+              "url": "https://www.youtube.com/watch?v=s8Rlfs7gZOo"
+            }
+          ]
+        },
+        {
+          "id": "window_insulate_seal",
+          "title": "Insulate and Seal the New Window",
+          "scenario": "Produce a final-stage clip focused on foam, backer, caulk, trim, and weather-tightness checks.",
+          "delivery_target": "learn",
+          "expert_gate_required": false,
+          "overlay_beats": [
+            "show where low-expansion foam belongs",
+            "mark caulk lines around jamb and casing",
+            "animate trim replacement order",
+            "end with weather seal inspection callout"
+          ],
+          "backend_enrichment": [
+            "sealant product lookup",
+            "energy efficiency checklist",
+            "photo evidence capture"
+          ],
+          "primary_text_sources": [
+            {
+              "publisher": "This Old House",
+              "title": "How To Install a Replacement Window",
+              "url": "https://www.thisoldhouse.com/windows/21017130/how-to-install-a-replacement-window"
+            },
+            {
+              "publisher": "Andersen Windows",
+              "title": "Insert Window Installation",
+              "url": "https://www.andersenwindows.com/support/window-door-installation/diy/insert-window-replacement"
+            }
+          ],
+          "youtube_reference_videos": [
+            {
+              "publisher": "This Old House",
+              "title": "How to Install a Replacement Window",
+              "url": "https://www.youtube.com/watch?v=s8Rlfs7gZOo"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "auto_maintenance_basics",
+      "title": "Auto Maintenance Basics",
+      "summary": "Text-first automotive maintenance overlays for oil, brakes, tires, and jump-start basics.",
+      "risk_profile": "mixed; basic checks are owner-safe, brake service should escalate to experienced users or pros",
+      "backend_enrichment": [
+        "VIN and owner-manual lookup",
+        "torque spec retrieval",
+        "service interval tracker",
+        "part and fluid lookup"
+      ],
+      "micro_lessons": [
+        {
+          "id": "oil_change_basics",
+          "title": "Engine Oil Check and Change Basics",
+          "scenario": "Create a short oil-check or oil-change explainer driven by owner-manual sequence and fluid discipline rather than copying source footage.",
+          "delivery_target": "learn",
+          "expert_gate_required": false,
+          "overlay_beats": [
+            "show level-ground and warm-engine wait conditions",
+            "mark dipstick wipe-read-reinsert sequence",
+            "animate drain and refill points abstractly without brand-specific copying",
+            "end with oil capacity and disposal reminders"
+          ],
+          "backend_enrichment": [
+            "VIN-specific oil spec",
+            "capacity lookup",
+            "service interval log"
+          ],
+          "primary_text_sources": [
+            {
+              "publisher": "Ford Owner Manual",
+              "title": "Engine Oil - Checking the Engine Oil Level",
+              "url": "https://www.fordservicecontent.com/Ford_Content/vdirsnet/OwnerManual/Home/Content?ProcUid=G2135710&Uid=G2357954&buildtype=web&countryCode=USA&div=f&languageCode=en&vFilteringEnabled=False&variantid=9156"
+            }
+          ],
+          "youtube_reference_videos": [
+            {
+              "publisher": "ChrisFix",
+              "title": "How to Change Your Oil (COMPLETE Guide)",
+              "url": "https://www.youtube.com/watch?v=O1hF25Cowv8"
+            }
+          ]
+        },
+        {
+          "id": "brake_pad_overview",
+          "title": "Brake Pad and Rotor Overview",
+          "scenario": "Generate a safety-heavy brake job explainer from text instructions that emphasizes support points, pad orientation, and torque discipline.",
+          "delivery_target": "learn",
+          "expert_gate_required": true,
+          "overlay_beats": [
+            "show wheel chock and jack-stand support zones",
+            "highlight pad orientation and hardware placement",
+            "mark caliper support and no-hose-strain warnings",
+            "end with torque and bed-in reminders"
+          ],
+          "backend_enrichment": [
+            "vehicle-specific torque specs",
+            "pad and rotor part lookup",
+            "service log entry"
+          ],
+          "primary_text_sources": [
+            {
+              "publisher": "Brembo",
+              "title": "Instructions for Replacing Brake Rotors and Pads",
+              "url": "https://www.bremboparts.com/america/en/support/car-fitting/instructions-for-replacing-brake-rotors-and-pads-ev-kit-280501"
+            }
+          ],
+          "youtube_reference_videos": [
+            {
+              "publisher": "ChrisFix",
+              "title": "How to Replace Brake Pads and Rotors (COMPLETE Guide)",
+              "url": "https://www.youtube.com/watch?v=6RQ9UabOIPg"
+            }
+          ]
+        },
+        {
+          "id": "tire_pressure_rotation",
+          "title": "Tire Pressure and Rotation",
+          "scenario": "Build a quick maintenance clip on cold-pressure checks, tread awareness, and tire rotation patterns.",
+          "delivery_target": "learn",
+          "expert_gate_required": false,
+          "overlay_beats": [
+            "point to door-jamb pressure label and cold-tire condition",
+            "animate PSI check at each valve stem",
+            "show front-to-back or cross rotation patterns abstractly",
+            "end with tread and damage inspection reminders"
+          ],
+          "backend_enrichment": [
+            "recommended PSI by VIN",
+            "rotation interval tracker",
+            "tread inspection log"
+          ],
+          "primary_text_sources": [
+            {
+              "publisher": "NHTSA",
+              "title": "Tire Safety Ratings and Awareness",
+              "url": "https://www.nhtsa.gov/vehicle-safety/tires"
+            },
+            {
+              "publisher": "Bridgestone",
+              "title": "Tire Rotation: How and Why to Rotate Your Tires",
+              "url": "https://www.bridgestonetire.com/learn/maintenance/tire-rotation/"
+            }
+          ],
+          "youtube_reference_videos": [
+            {
+              "publisher": "ChrisFix",
+              "title": "How to Change Your Oil (COMPLETE Guide)",
+              "url": "https://www.youtube.com/watch?v=O1hF25Cowv8"
+            }
+          ]
+        },
+        {
+          "id": "jump_start_12v",
+          "title": "12V Jump Start Basics",
+          "scenario": "Create a roadside-assist style clip that shows cable order, connection points, and disconnect sequence from owner-manual guidance.",
+          "delivery_target": "assist",
+          "expert_gate_required": false,
+          "overlay_beats": [
+            "identify positive and negative connection points on both vehicles",
+            "animate cable order with numbered arrows",
+            "show run-time wait before disconnect",
+            "reverse the sequence for safe removal"
+          ],
+          "backend_enrichment": [
+            "VIN-specific battery location",
+            "owner-manual snippet retrieval",
+            "roadside escalation flow"
+          ],
+          "primary_text_sources": [
+            {
+              "publisher": "Ford Owner Manual",
+              "title": "Jump Starting the Vehicle",
+              "url": "https://www.fordservicecontent.com/Ford_Content/vdirsnet/OwnerManual/Home/Content?ProcUid=G2138505&Uid=G2252163&buildtype=web%2F1000&countryCode=USA&div=f&languageCode=en&userMarket=USA&vFilteringEnabled=True&variantid=9334"
+            }
+          ],
+          "youtube_reference_videos": [
+            {
+              "publisher": "ChrisFix",
+              "title": "How to Change Your Oil (COMPLETE Guide)",
+              "url": "https://www.youtube.com/watch?v=O1hF25Cowv8"
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}

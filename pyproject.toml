@@ -1,0 +1,8 @@
+[project]
+name = "upskillai-betahacks"
+version = "0.1.0"
+description = "Resumable BytePlus Seed pipeline scaffold for the UpSkillAI BetaHacks submission."
+requires-python = ">=3.11"
+
+[tool.pyright]
+typeCheckingMode = "basic"
